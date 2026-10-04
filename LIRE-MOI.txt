@@ -1,0 +1,37 @@
+DIGITAL CONCEPTS — VERSION OPTIMISÉE
+
+INSTALLATION
+Décompresser cette archive, puis mettre en ligne tout son contenu dans le même dossier : index.html, les pages HTML et le dossier assets. Ne pas téléverser les HTML seuls. Conserver les noms des fichiers du dossier assets.
+L'accueil est index.html. Les pages sont landing-page.html, site-vitrine.html et e-commerce.html. Les anciens noms avec espaces redirigent vers les nouvelles pages. Les liens historiques #legal-* de l'accueil restent pris en charge.
+
+OPTIMISATIONS
+- Médias intégrés en base64 extraits en fichiers réutilisables et cacheables.
+- Doublons strictement identiques mutualisés entre les pages.
+- Images PNG compressées sans perte lorsque cela réduit leur taille.
+- MP4 préparés pour une lecture progressive (faststart), sans réencodage.
+- Feuilles de style identiques partagées ; ordre de la cascade conservé.
+- Scripts volumineux externalisés ; ordre d'exécution conservé.
+- Configurations inutilisées et médias devenus inutilisés supprimés.
+- Fond sélectionné explicitement selon la largeur de l'écran, avec image d'attente, reprise au retour sur l'onglet et nouvelle tentative en cas d'erreur.
+- Vidéos du portfolio chargées à l'apparition de la section, arrêtées hors champ et dans un onglet masqué. Reprise et boutons de lecture corrigés.
+- Accueil et pages légales séparés : plus de décodage de toutes ces pages avant l'affichage.
+
+POIDS
+Avant : 172,73 Mo pour les quatre fichiers fournis.
+Après : environ 73,1 Mo pour l'ensemble du site décompressé.
+Réduction : environ 58 %. Le poids du ZIP est légèrement inférieur.
+Les variantes vidéo de dimensions ou d'encodages différents sont conservées pour préserver le rendu de chaque présentation.
+
+CONTRÔLES
+Syntaxe JavaScript, références locales et liens internes contrôlés.
+Chargement du DOM, sélection du fond mobile/desktop, langues, FAQ et commandes de lecture vérifiés en simulation DOM à 390 et 1440 pixels.
+Flux compressés des MP4 comparés avant/après : identiques.
+Le contrôle visuel et la lecture vidéo dans un véritable navigateur n'ont pas pu être effectués dans cet environnement. Vérifier le rendu et la lecture une fois les fichiers déposés sur l'hébergement.
+
+DÉPENDANCES EXISTANTES CONSERVÉES
+Les vidéos du portfolio Landing Page sont toujours servies par Cloudinary. Les polices, certaines bibliothèques d'animation et le formulaire dépendent de leurs services externes d'origine. Une connexion Internet est nécessaire pour ces fonctions. Le formulaire n'a pas été soumis pendant les contrôles.
+
+CORRECTIONS MOBILE ET NAVIGATION
+Sélecteur de langue discret accessible dans la barre de navigation mobile sur les quatre pages.
+Contenu principal des portfolios pré-rendu dans le HTML : le formulaire ne précède plus temporairement le contenu lors du chargement.
+Restauration du défilement désactivée pour une nouvelle navigation sans ancre ; liens vers les sections conservés.
